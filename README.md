@@ -33,4 +33,4 @@
 - 질문은 pr을 통해 합니다.
 
 ## ✔ 참고자료
-[마크다운] (https://gist.github.com/ihoneymon/652be052a0727ad59601).
+[마크다운] (https://gist.github.com/ihoneymon/652be052a0727ad59601) .
