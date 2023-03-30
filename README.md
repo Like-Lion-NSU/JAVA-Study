@@ -5,23 +5,13 @@
 - JAVA공부를 하며 Spring Boot를 대비합니다.
 
 ## 👨‍💻스터디원
-<p>
-<a href="https://github.com/shyeon4643">
-  <img src="https://avatars.githubusercontent.com/u/62410059?v=4" width="100">
-</a>
-<a href="">
-  <img src="">
-</a>
-<a href="">
-  <img src="">
-</a>
-<a href="">
-  <img src="">
-</a>
-</p>
+|                                                              서송현                                                               |                                                               박민서                                                               |                                                              이수경                                                              |송경훈|
+|:------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------------------:|:---:|
+|<p><a href="https://github.com/shyeon4643"> <img src="https://avatars.githubusercontent.com/u/62410059?v=4" width="100"></a></p>|<p><a href="https://github.com/minseo12345"><img src="https://avatars.githubusercontent.com/u/115347424?v=4" width="100"></a></p>|<p><a href="https://github.com/Sookyung87"><img src="https://avatars.githubusercontent.com/u/55040739?v=4" width="100"></a></p>|<p><a href="https://github.com/rudgns328"><img src="https://avatars.githubusercontent.com/u/128586833?v=4" width="100"></a></p>|
+
 
 ## 📜 규칙
-- 스터디는 디스코드로 매주 금요일 21시 진행
+- 스터디는 디스코드로 매주 일요일 21시 진행합니다.
 - repo는 fork해서 사용합니다.
 - branch는 main만 사용합니다.
 - 매주 각자 정해진 주제에 대해서 공부합니다.
