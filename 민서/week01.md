@@ -1,6 +1,5 @@
 # week01
 ### 변수, 자료형, 연산자, 조건문, 반복문
-#### 새로 알게된 내용은 초록색으로 표시하겠습니다.
 ***
 # 변수
 ***
@@ -86,3 +85,71 @@ int hour = 3; -> 정수형 변수 hour에 3이란 값을 저장한다.
 > while 문   
 * while(조건식) { 반복 실행문; } 조건식이 true일 동안 반복적으로 실행문을 수행한다. 
 조건식 안에 true만 적을 경우 while문이 무한루프가 되기 때문에 {}안에 break문을 작성해 무한루프를 빠져 나와야 한다.   
+> do~while 문   
+* do~while 문은 while 문과 다르게 반복문 본체를 최소 한 번 실행한 후 조건식을 평가한다. 조건식이 거짓이라도 한 번은 실행한다.   
+>> do{ 반복 실행문; } while(조건식);   
+   
+> while 문과 do~while 문 비교   
+>>> int i = 10;   
+> do {   
+>      i++   
+>     } while(i<5);   
+> System.out.println("do~while 문 실행 후 : " + i);   
+>  i = 10;   
+> while(i<5){
+> i++;   
+> }   
+> System.out.println("while 문 실행 후 : " + i);    
+> }   
+
+***
+# for 문   
+***   
+* 반복할 횟수를 미리 알 수 있을 때 주로 사용한다.   
+>> for(초기식; 조건식; 증감식) { 반복 실행문 } <br>
+>
+>> for( ; ; ) 무한 반복문 <br>
+> 
+>> for(int i = 0, j = 10; i<j; i++,j-- )   
+   
+***
+# 분기문   
+***   
+* break문이나 continue 문은 무조건 다른경로로 이동하여 반복문을
+종료하거나 현재 반복문을 마칠 때 주로 사용한다.   
+<br>
+* 분기문을 사용하면 프로그램 흐름이 복잡해지기 때문에 꼭 필요할 때만 사용하는 것이 좋다.   
+> break 문   
+* break 문은 반복문이나 switch 문의 본체를 벗어날 때 사용한다.   
+>> int i = 1, j = 5;   
+> while(true) {   
+> System.out.println(i++);   
+> if(i>=j)
+> break } <br>   
+
+> continue 문   
+* 반복문에서만 사용 continue 아레에 반복은 건너뛰고 나머지 반복만 실행한다.   
+<br>
+* for문은 증감식으로, while문과 do~while 문은 조건식으로 실행 흐름이 이동된다.   
+>> for(int i = 0; i <10; i++){   
+> if(i % 2 == 0) 
+> continue   
+> System.out.println(i);    
+> }   
+***
+# switch case 문   
+***   
+* if 문처럼 조건문의 일종으로 여러 경로 중 하나를 선택할 때 사용된다.   
+>> switch(변수 or 연산식 ) {   
+> case 상수1 : 0개 이상의 실행문   
+> break; -> break 문이 없으면 다음 case 레이블을 에 있는 수행   
+> ...   
+> default : 0 개 이상의 실행문   
+> }   
+> <br>   
+> int number = 2;   
+>    
+> switch (number) {   
+> case 3: System.out.print("*");   
+> case 2: System.out.print("*");   
+> case 1: System.out.print("*"); }
