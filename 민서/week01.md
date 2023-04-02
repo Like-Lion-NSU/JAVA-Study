@@ -10,9 +10,9 @@
 ex) int a,b,c;
 > 변수이름
 * 변수 이름은 자바 언어에서 정한 명명 규칙을 따라야한다.   
-a. 첫 번째 글자는 문자이거나 <span style="color:green"> '$', '_' </span> 이어야 하고 숫자로 시작할 수 없다.   
+a. 첫 번째 글자는 문자이거나  '$', '_'  이어야 하고 숫자로 시작할 수 없다.   
 b. 영어 대소문자를 구분한다.   
-c. <span style="color:green"> 첫 문자는 영어 소문자로 시작하되, 다른 단어가 붙을 경우 첫 문자를 대문자로 한다. </span> ex) firstName   
+c.  첫 문자는 영어 소문자로 시작하되, 다른 단어가 붙을 경우 첫 문자를 대문자로 한다. ex) firstName   
 d. 문자 수(길이)의 제한은 없다.   
 e. 자바 예약어는 사용할 수 없다. 
 > 예약어
@@ -56,7 +56,9 @@ int hour = 3; -> 정수형 변수 hour에 3이란 값을 저장한다.
 > 연산 방향   
 * 대부분의 연산자는 왼쪽에서 오른쪽으로 연산이 되지만, 증감과 대입은 오른쪽에서 왼쪽으로 연산된다.   
 > 연산 우선순위   
-* 서로 다른 연산자들이 복합적으로 우선적으로 연산되는 연산자가 있다. 연산식에서 우선순위를 정하고 싶을 때에는 ()를 활용하면 된다.   
+* 단항 -> 이항 -> 삼항 연산자 순서이다.   
+* 대입 연산자의 우선순위는 가장 낮다.
+* 서로 다른 연산자들이 복합적으로 우선적으로 연산되는 연산자가 있다. 연산식에서 우선순위를 정하고 싶을 때에는 ()를 활용하면 된다.
 ***   
 # 조건문   
 ***
@@ -78,7 +80,35 @@ int hour = 3; -> 정수형 변수 hour에 3이란 값을 저장한다.
    
 > 중첩 if 문   
 * if 문 안에 if문이 포함될 수 있다.   
-   
+>> if(score >= 90)   
+grade = "A"   
+> else{   
+>       if(score>=80)   
+>        grade = "B";   
+> else{   
+>       if(score>=70)   
+>        grade = "C";   
+> else   
+>       grade = "F";   
+>   }   
+> }
+> <br>   
+
+> switch case 문
+* if 문처럼 조건문의 일종으로 여러 경로 중 하나를 선택할 때 사용된다.
+>> switch(변수 or 연산식 ) {   
+> case 상수1 : 0개 이상의 실행문   
+> break; -> break 문이 없으면 다음 case 레이블을 에 있는 수행   
+> ...   
+> default : 0 개 이상의 실행문   
+> }   
+> <br>   
+> int number = 2;
+>
+> switch (number) {   
+> case 3: System.out.print("*");   
+> case 2: System.out.print("*");   
+> case 1: System.out.print("*"); }
 ***   
 # 반복문   
 ***   
@@ -136,20 +166,3 @@ int hour = 3; -> 정수형 변수 hour에 3이란 값을 저장한다.
 > continue   
 > System.out.println(i);    
 > }   
-***
-# switch case 문   
-***   
-* if 문처럼 조건문의 일종으로 여러 경로 중 하나를 선택할 때 사용된다.   
->> switch(변수 or 연산식 ) {   
-> case 상수1 : 0개 이상의 실행문   
-> break; -> break 문이 없으면 다음 case 레이블을 에 있는 수행   
-> ...   
-> default : 0 개 이상의 실행문   
-> }   
-> <br>   
-> int number = 2;   
->    
-> switch (number) {   
-> case 3: System.out.print("*");   
-> case 2: System.out.print("*");   
-> case 1: System.out.print("*"); }
