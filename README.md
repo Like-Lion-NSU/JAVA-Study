@@ -5,9 +5,9 @@
 - JAVA공부를 하며 Spring Boot를 대비합니다.
 
 ## 👨‍💻스터디원
-|                                                              서송현                                                               |                                                               박민서                                                               |                                                              이수경                                                              |송경훈|
-|:------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------------------:|:---:|
-|<p><a href="https://github.com/shyeon4643"> <img src="https://avatars.githubusercontent.com/u/62410059?v=4" width="100"></a></p>|<p><a href="https://github.com/minseo12345"><img src="https://avatars.githubusercontent.com/u/115347424?v=4" width="100"></a></p>|<p><a href="https://github.com/Sookyung87"><img src="https://avatars.githubusercontent.com/u/55040739?v=4" width="100"></a></p>|<p><a href="https://github.com/rudgns328"><img src="https://avatars.githubusercontent.com/u/128586833?v=4" width="100"></a></p>|
+|                                                              서송현                                                               |                                                               박민서                                                               |                                                              이수경                                                              |송경훈|방지은|
+|:------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------------------:|:---:|:---:|
+|<p><a href="https://github.com/shyeon4643"> <img src="https://avatars.githubusercontent.com/u/62410059?v=4" width="100"></a></p>|<p><a href="https://github.com/minseo12345"><img src="https://avatars.githubusercontent.com/u/115347424?v=4" width="100"></a></p>|<p><a href="https://github.com/Sookyung87"><img src="https://avatars.githubusercontent.com/u/55040739?v=4" width="100"></a></p>|<p><a href="https://github.com/rudgns328"><img src="https://avatars.githubusercontent.com/u/128586833?v=4" width="100"></a></p>|<p><a href="https://github.com/RRGJDS"><img src="https://avatars.githubusercontent.com/u/99534847?v=4" width="100"></a></p>|
 
 
 ## 📜 규칙
@@ -33,8 +33,8 @@
 ## 🎈 주제
 1. 변수, 자료형, 연산자, 조건문, 반복문
 2. 배열&예외처리, 클래스와 객체
-4. 상속과 다형성
-5. 컬렉션&제네릭&람다식
+4. 상속
+5. 컬렉션&제네릭&람다식&기본 클래스
 6. 입출력&스트림
 
 ## ✔ 참고자료
