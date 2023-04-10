@@ -7,7 +7,7 @@ class Rectangle {
         System.out.printf("(%d, %d)에서 크기가 %d*%d인 사각형\n", x,y,width,height);
     }
     boolean contains(Rectangle a){
-
+        return (x+width>a.x+a.width)&&(y+height>a.y+a.height);
     }
     Rectangle(){}
     Rectangle(int x, int y, int w, int h){
@@ -19,9 +19,6 @@ class Rectangle {
 }
 
 public class hw2 {
-    /*
-- boolean contains(Rectangle a):매개변수로 받은 a가 현 사각형 안에 있으면 true 리턴
-*/
     public static void main(String args[]){
         Rectangle a = new Rectangle(2,2,8,7);
         Rectangle b = new Rectangle(5,5,6,6);
@@ -30,7 +27,7 @@ public class hw2 {
         a.show();
         System.out.println("b의 면적은" + b.sqaure());
         if(c.contains(a)) System.out.println("c는 a을 포함합니다.");
-        if(c.contains(a)) System.out.println("c는 b을 포함합니다.");
+        if(c.contains(b)) System.out.println("c는 b을 포함합니다.");
     }
 
 /*
