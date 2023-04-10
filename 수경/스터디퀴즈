@@ -1,0 +1,57 @@
+import java.util.Scanner;
+
+public class studyq1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        char []arr = {'a', 'b', 'c','d','e'};
+
+        System.out.print("알파벳 입력하세요: ");
+        char alpabat = sc.next().charAt(0);
+
+        if(alpabat == arr[4]){
+
+            for(int i=4; i>=0; i--){
+                for(int j=0; j<=i; j++){
+                    System.out.print(arr[j]);
+                }
+                System.out.println();
+            }
+        }
+
+        if(alpabat == arr[3]){
+
+            for(int i=3; i>=0; i--){
+                for(int j=0; j<=i; j++){
+                    System.out.print(arr[j]);
+                }
+                System.out.println();
+            }
+        }
+
+        if(alpabat == arr[2]){
+
+            for(int i=2; i>=0; i--){
+                for(int j=0; j<=i; j++){
+                    System.out.print(arr[j]);
+                }
+                System.out.println();
+            }
+        }
+
+        if(alpabat == arr[1]){
+
+            for(int i=1; i>=0; i--){
+                for(int j=0; j<=i; j++){
+                    System.out.print(arr[j]);
+                }
+                System.out.println();
+            }
+        }
+
+        if(alpabat == arr[0]){
+            System.out.println("a");
+        }
+
+    }
+}
