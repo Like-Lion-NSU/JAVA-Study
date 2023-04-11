@@ -69,17 +69,16 @@ public class Q1 {
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------
-//문제2 ㅠㅠㅠㅠHelp..
+//문제2 :)
 
-class PublicTransport{
-    void showInfo(){
-
-    };
+abstract class PublicTransport{
+    void showInfo(){};
+    void take(){};
 }
 
 
 class Bus extends PublicTransport{
-    public Bus(){
+
         int BusNum;
         int B_passenger;
         int B_income;
@@ -94,36 +93,54 @@ class Bus extends PublicTransport{
             B_passenger++;
         }
 
-        void showInfo(int BusNum,int B_passenger, int B_income){
-            this.BusNum = BusNum;
-            this.B_passenger = B_passenger;
-            this.B_income = B_income;
-
+        void showInfo(){
             System.out.println("버스" + BusNum + "번의 승객은 " + B_passenger + "명이고, 수입은 " + B_income + "원 입니다.");
         }
 
-    }
+
 
 }
 
 class Subway extends PublicTransport{
-    public Subway(){
-        int SubwayNum;
-        int S_passenger;
-        int S_income;
+    String SubNum;
+    int S_passenger;
+    int S_income;
+    public Subway(){}  //public붙여도 상관 없!
+
+    Subway(String SubNum){
+        this.SubNum = SubNum;
+    }
+
+    void take(int S_income){
+        this.S_income += S_income;
+        S_passenger++;
+    }
+
+    void showInfo(){
+        System.out.println("버스" + SubNum + "번의 승객은 " + S_passenger + "명이고, 수입은 " + S_income + "원 입니다.");
     }
 
 }
 
 class Taxi extends PublicTransport{
-    public Taxi(){
-        int TaxiNum;
-        int T_passenger;
-        int T_income;
+    int TaxiNum;
+    int T_passenger;
+    int T_income;
+    Taxi(){}
 
-        Taxi(){}
-
+    Taxi(int TaxiNum){
+        this.TaxiNum = TaxiNum;
     }
+
+    void take(int T_income){
+        this.T_income += T_income;
+        T_passenger++;
+    }
+
+    void showInfo(){
+        System.out.println("버스" + TaxiNum + "번의 승객은 " + T_passenger + "명이고, 수입은 " + T_income + "원 입니다.");
+    }
+
 
 
 }
@@ -152,6 +169,10 @@ class Student{
         this.money -= 1500;
     }
 
+    void showInfo(){
+        System.out.println(name+"의 남은 돈은 "+money+"원 입니다.");
+    }
+
 }
 
 public class Q2 {
@@ -177,3 +198,6 @@ public class Q2 {
 
     }
 }
+
+
+
