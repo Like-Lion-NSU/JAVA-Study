@@ -1,0 +1,106 @@
+class PublicTransport{
+    void showInfo(){
+
+    };
+}
+
+
+class Bus extends PublicTransport{
+    public Bus(){
+        int BusNum;
+        int B_passenger;
+        int B_income;
+
+        Bus(){}     //기본 생성자
+        Bus(int BusNum){
+            this.BusNum = BusNum;
+        }
+
+        void take(int B_income){
+            this.B_income += B_income;
+            B_passenger++;
+        }
+
+        void showInfo(int BusNum,int B_passenger, int B_income){
+            this.BusNum = BusNum;
+            this.B_passenger = B_passenger;
+            this.B_income = B_income;
+
+            System.out.println("버스" + BusNum + "번의 승객은 " + B_passenger + "명이고, 수입은 " + B_income + "원 입니다.");
+        }
+
+    }
+
+}
+
+class Subway extends PublicTransport{
+    public Subway(){
+        int SubwayNum;
+        int S_passenger;
+        int S_income;
+    }
+
+}
+
+class Taxi extends PublicTransport{
+    public Taxi(){
+        int TaxiNum;
+        int T_passenger;
+        int T_income;
+
+        Taxi(){}
+
+    }
+
+
+}
+
+
+class Student{
+    String name;
+    int money;
+
+    Student(){}
+    public Student(String name, int money){
+        this.name=name;
+        this.money=money;
+    }
+    void takeBus(Bus bus){
+        bus.take(1500);
+        this.money-=1500;
+    }
+    void takeTaxi(Taxi taxi){       // 택시 탑승
+        taxi.take(4500);
+        this.money -= 4500;
+    }
+
+    void takeSubway(Subway subway){     // 지하철 탑승
+        subway.take(1500);
+        this.money -= 1500;
+    }
+
+}
+
+public class Q2 {
+    public static void main(String[] args) {
+        Student studentKim = new Student("Kim", 10000);
+        Student studentLee = new Student("Lee", 45000);
+        Student studentPark = new Student("Park", 5000);
+
+        Bus bus771 = new Bus(771);      // 노선 번호 771 버스 생성
+        studentKim.takeBus(bus771);     // kim이 771 버스 탐
+        studentKim.showInfo();      // kim 정보 출력
+        bus771.showInfo();      // 771버스 정보 출력
+
+        Taxi taxi0406 = new Taxi(0406);     // 택시 번호 0406 택시 생성
+        studentLee.takeTaxi(taxi0406);      // Lee가 0406 택시 탐
+        studentLee.showInfo();      // Lee 정보 출력
+        taxi0406.showInfo();        // 0406택시 정보 출력
+
+        Subway subway1 = new Subway("1호선");     // 1호선 지하철 생성
+        studentPark.takeSubway(subway1);        // Park이 1호선 지하철 탐
+        studentPark.showInfo();     // Park 정보 출력
+        subway1.showInfo();     // 1호선 정보 출력
+
+    }
+}
