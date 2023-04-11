@@ -1,3 +1,76 @@
+//문제1
+
+import java.util.Scanner;
+
+public class Q1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("금액을 입력하세요>> ");
+
+        int money = sc.nextInt();
+
+        int won50000=0;
+        int won10000=0;
+        int won5000=0;
+        int won1000=0;
+        int won500=0;
+        int won100=0;
+        int won50=0;
+        int won10=0;
+        int won1=0;
+
+        //계산
+        if (money >= 50000) {
+            won50000 = money / 50000;
+            money %= 50000;
+        }
+        if (money >= 10000) {
+            won10000 = money / 10000;
+            money %= 10000;
+        }
+        if (money >= 5000) {
+            won5000 = money / 5000;
+            money %= 5000;
+        }
+        if (money >= 1000) {
+            won1000 = money / 1000;
+            money %= 1000;
+        }
+        if (money >= 500) {
+            won500 = money / 500;
+            money %= 500;
+        }
+        if (money >= 100) {
+            won100 = money / 100;
+            money %= 100;
+        }
+        if (money >= 50) {
+            won50 = money / 50;
+            money %= 50;
+        }
+        if (money >= 10) {
+            won10 = money / 10;
+            money %= 10;
+        }
+        won1 = money;
+
+        //출력
+        System.out.println("오만원권: "+ won50000 + "장");
+        System.out.println("만원권: "+ won10000 + "장");
+        System.out.println("오천원권: "+ won5000 + "장");
+        System.out.println("천원권: "+ won1000 + "장");
+        System.out.println("오백원: "+ won500 + "개");
+        System.out.println("백원: "+ won100 + "개");
+        System.out.println("오십원: "+ won50 + "개");
+        System.out.println("십원: "+ won10 + "개");
+        System.out.println("일원: "+ won1 + "개");
+    }
+}
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+//문제2 ㅠㅠㅠㅠHelp..
+
 class PublicTransport{
     void showInfo(){
 
