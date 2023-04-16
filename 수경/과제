@@ -1,3 +1,5 @@
+//수정완료!
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -22,11 +24,10 @@ public class Argument1 {
 
         List<String> names = Arrays.asList(name1,name2,name3,name4,name5);
 
-        int count = names.stream()
-                .filter(n->n.startsWith("이"))               //오류발생....!
-                .distinct().filter(n->n.startsWith("이")).forEach(System.out::println);
+        names.stream().filter(n->n.startsWith("이")).forEach(System.out::println);
+        int count= (int)names.stream().filter(n->n.startsWith("이")).count();
 
-        System.out.println("나와 성이 같은 사람은 총 "+ "count" +"명 입니다.");
+        System.out.println("나와 성이 같은 사람은 총 "+ count +"명 입니다.");
     }
 }
 
