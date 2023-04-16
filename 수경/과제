@@ -26,7 +26,7 @@ public class Argument1 {
                 .filter(n->n.startsWith("이"))
                 .distinct().filter(n->n.startsWith("이")).forEach(System.out::println);
 
-        System.out.println("나와 성이 같은 사람은 총 "+ "모르겠어요!!!!" +"명 입니다.");
+        System.out.println("나와 성이 같은 사람은 총 "+ "count" +"명 입니다.");
     }
 }
 
