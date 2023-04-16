@@ -22,7 +22,7 @@ public class Argument1 {
 
         List<String> names = Arrays.asList(name1,name2,name3,name4,name5);
 
-        names.stream()
+        int count = names.stream()
                 .filter(n->n.startsWith("이"))
                 .distinct().filter(n->n.startsWith("이")).forEach(System.out::println);
 
