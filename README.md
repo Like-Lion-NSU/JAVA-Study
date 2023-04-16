@@ -5,23 +5,13 @@
 - JAVA공부를 하며 Spring Boot를 대비합니다.
 
 ## 👨‍💻스터디원
-<p>
-<a href="https://github.com/shyeon4643">
-  <img src="https://avatars.githubusercontent.com/u/62410059?v=4" width="100">
-</a>
-<a href="">
-  <img src="">
-</a>
-<a href="">
-  <img src="">
-</a>
-<a href="">
-  <img src="">
-</a>
-</p>
+|                                                              서송현                                                               |                                                               박민서                                                               |                                                              이수경                                                              |송경훈|방지은|
+|:------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------------------:|:---:|:---:|
+|<p><a href="https://github.com/shyeon4643"> <img src="https://avatars.githubusercontent.com/u/62410059?v=4" width="100"></a></p>|<p><a href="https://github.com/minseo12345"><img src="https://avatars.githubusercontent.com/u/115347424?v=4" width="100"></a></p>|<p><a href="https://github.com/Sookyung87"><img src="https://avatars.githubusercontent.com/u/55040739?v=4" width="100"></a></p>|<p><a href="https://github.com/rudgns328"><img src="https://avatars.githubusercontent.com/u/128586833?v=4" width="100"></a></p>|<p><a href="https://github.com/RRGJDS"><img src="https://avatars.githubusercontent.com/u/99534847?v=4" width="100"></a></p>|
+
 
 ## 📜 규칙
-- 스터디는 디스코드로 매주 금요일 21시 진행
+- 스터디는 디스코드로 매주 일요일 21시 진행합니다.
 - repo는 fork해서 사용합니다.
 - branch는 main만 사용합니다.
 - 매주 각자 정해진 주제에 대해서 공부합니다.
@@ -32,22 +22,20 @@
 - 발표자 외 다른 스터디원들은 정리합니다.
 - 질문은 pr을 통해 합니다.
 - issue 제목은 주제로 합니다.
-    - 제목 예시
+    - `제목 예시`
         - 변수, 자료형, 연산자, 조건문, 반복문
 - commit message 규칙
-    - 예시
+    - `예시`
         - 변수, 자료형, 연산자, 조건문, 반복문 - #1
-- 벌칙
+- 벌칙 : `5000원`
 
 
 ## 🎈 주제
-- 변수, 자료형, 연산자, 조건문, 반복문
-- 배열&예외처리
-- 클래스와 객체
-- 상속과 다형성
-- 기본 클래스
-- 컬렉션&제네릭&람다식
-- 입출력&스트림
+1. 변수, 자료형, 연산자, 조건문, 반복문
+2. 배열&예외처리, 클래스와 객체
+4. 상속
+5. 컬렉션&제네릭&람다식&기본 클래스
+6. 입출력&스트림
 
 ## ✔ 참고자료
 - [마크다운](https://gist.github.com/ihoneymon/652be052a0727ad59601)
