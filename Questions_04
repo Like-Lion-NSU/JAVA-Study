@@ -106,6 +106,61 @@ public class Q04_3 {
 Q.04_4
 
 
+import java.awt.*;
+
+public class Q04_4 {
+
+    public static class Ractangle{
+        private int x;
+        private int y;
+        private int width;
+        private int height;
+
+        Ractangle(int x, int y, int width, int height){
+            this.x =x;
+            this.y = y;
+            this.width =width;
+            this.height = height;
+        }
+
+        public int square(){    //사각형의 넓이 리턴
+            return width*height;
+        }
+
+        public void show(){
+            System.out.println("("+x+","+y+"에서의 크기가 "+width+"x"+height+"인 사각형");
+        }
+
+     ********질문!!   public boolean contains( ){
+            int a = r.x+r.width;
+            int b = r.y+r.height;
+            
+            int c = t.x+t.width;
+            int d = t.y+t.height;
+            
+            if(a<c&&c<d){
+                return true;
+            }else {return false;}
+        }
+
+    }
+    public static void main(String[] args) {
+        Ractangle r = new Ractangle(2,2,8,7);
+        Ractangle s = new Ractangle(5,5,6,6);
+        Ractangle t = new Ractangle(1,1,10,10);
+
+        r.show();
+        System.out.println("s의 면적은 "+ s.square());
+        if(t.contains(r)) System.out.println("t는 r을 포함합니다.");
+        if(t.contains(s)) System.out.println("t는 s을 포함합니다.");
+    }
+}
+
+
+----------------------------------------------------------------------------------------------------------------------------
+
+Q,04_5
+
 
 
 
