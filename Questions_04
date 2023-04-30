@@ -1,0 +1,77 @@
+Q.04_1
+
+public class Q04_1 {
+
+    static class TV{  ******** 별부분 질문! TV클래스랑 메인클래스 접근제어자가 같아야 되나요?  둘 중 한곳에 static을 안 적으면 에러남..
+       private String name;
+       private int year;
+       private int size;
+
+        public TV(String name, int year, int size){ //생성자
+            this.name = name;
+            this.year = year;
+            this.size = size;
+        }
+        TV(){}
+        public void show(){
+            System.out.println(name+"에서 만든 "+year+"년형 "+size+"인치 TV");
+        }
+
+    }
+
+
+    public static void main(String[] args) {   *******
+        TV myTV = new TV("LG", 2017, 32);
+        myTV.show();
+    }
+}
+
+
+--------------------------------------------------------------------------------------------------------
+
+Q.04_2
+
+import java.util.Scanner;
+
+public class Q04_2 {
+
+    public static class Grade{
+        private int math;
+        private int science;
+        private int english;
+
+        public Grade(int math, int science, int english){
+            this.math = math;
+            this.science = science;
+            this.english = english;
+
+        }
+        Grade(){}
+
+        int average(){
+            return ((math+science+english)/3);
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("수학, 과학, 영어 순으로 3개의 점수 입력>> ");
+        int math = scanner.nextInt();
+        int science = scanner.nextInt();
+        int english = scanner.nextInt();
+        Grade me = new Grade(math, science, english);
+        System.out.println("평균은 "+ me.average());
+
+        scanner.close();
+    }
+}
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+Q.04_3
+
+
+
+
