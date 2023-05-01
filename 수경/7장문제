@@ -1,1 +1,32 @@
 
+Q.07_1
+
+import java.util.Scanner;
+import java.util.Vector;
+
+public class Q07_1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Vector<Integer> vector = new Vector<Integer>();
+
+        System.out.print("점수(-1입력될 때까지)>> ");
+
+        int  num = sc.nextInt();
+
+        while (num != -1){
+            if(num > 0){
+                vector.add(num);
+            }
+            
+            num = sc.nextInt();  //양의 정수가 아니면 벡터 값을 수정하지 않고 num값 스캔
+        }
+        
+        int max; //최대값 찾기
+        for(int i=0; i< vector.size(); i++){
+            
+            
+        }
+
+        System.out.println("가장 큰 수는 "+max);
+    }
+}
