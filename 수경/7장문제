@@ -30,3 +30,80 @@ public class Q07_1 {
         System.out.println("가장 큰 수는 "+max);
     }
 }
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+Q.07_2
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Q07_2 {
+    public static void main(String[] args) {
+        double A = 4.0;
+        double B = 3.0;
+        double C = 2.0;
+        double D = 1.0;
+        double F = 0.0;
+
+        ArrayList<Character> grades = new ArrayList<Character>();
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("6개의 학점을 빈 칸으로 분리 입력(A/B/C/D/F)>> ");
+
+        double sum = 0.0;
+
+        while (grades!=null) {   //이러면 while문 계속 돔
+            if (grades.equals("A")) {
+                sum += A;
+            } else if (grades.equals("B")) {
+                sum += B;
+            } else if (grades.equals("C")) {
+                sum += C;
+            } else if (grades.equals("D")) {
+                sum += D;
+            } else if (grades.equals("F")) {
+                sum += F;
+            }
+
+        }
+        double average = sum / grades.size();
+        System.out.println("Average grade: " + average);
+    }
+}
+
+
+--------------------------------------------------------------------------------------------------------------------
+
+Q.08_4
+
+
+import java.util.Scanner;
+import java.util.Vector;
+
+public class Q07_4 {
+    public static void main(String[] args) {
+        Vector<Integer> rainfall = new Vector<Integer>();
+        Scanner scanner = new Scanner(System.in);
+
+        int sum = 0;
+        while (true) {
+            System.out.print("강수량 입력 (0 입력시 종료)>> ");
+            int input = scanner.nextInt();
+            if (input == 0) {
+                break;
+            }
+            rainfall.add(input);
+            sum += input;
+            System.out.println(rainfall.toString());
+            System.out.println("현재 평균 " + (double)sum/rainfall.size());
+        }
+
+        scanner.close();
+    }
+
+}
+
+
+
