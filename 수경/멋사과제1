@@ -1,0 +1,203 @@
+//문제1
+
+import java.util.Scanner;
+
+public class Q1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("금액을 입력하세요>> ");
+
+        int money = sc.nextInt();
+
+        int won50000=0;
+        int won10000=0;
+        int won5000=0;
+        int won1000=0;
+        int won500=0;
+        int won100=0;
+        int won50=0;
+        int won10=0;
+        int won1=0;
+
+        //계산
+        if (money >= 50000) {
+            won50000 = money / 50000;
+            money %= 50000;
+        }
+        if (money >= 10000) {
+            won10000 = money / 10000;
+            money %= 10000;
+        }
+        if (money >= 5000) {
+            won5000 = money / 5000;
+            money %= 5000;
+        }
+        if (money >= 1000) {
+            won1000 = money / 1000;
+            money %= 1000;
+        }
+        if (money >= 500) {
+            won500 = money / 500;
+            money %= 500;
+        }
+        if (money >= 100) {
+            won100 = money / 100;
+            money %= 100;
+        }
+        if (money >= 50) {
+            won50 = money / 50;
+            money %= 50;
+        }
+        if (money >= 10) {
+            won10 = money / 10;
+            money %= 10;
+        }
+        won1 = money;
+
+        //출력
+        System.out.println("오만원권: "+ won50000 + "장");
+        System.out.println("만원권: "+ won10000 + "장");
+        System.out.println("오천원권: "+ won5000 + "장");
+        System.out.println("천원권: "+ won1000 + "장");
+        System.out.println("오백원: "+ won500 + "개");
+        System.out.println("백원: "+ won100 + "개");
+        System.out.println("오십원: "+ won50 + "개");
+        System.out.println("십원: "+ won10 + "개");
+        System.out.println("일원: "+ won1 + "개");
+    }
+}
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+//문제2 :)
+
+abstract class PublicTransport{
+    void showInfo(){};
+    void take(){};
+}
+
+
+class Bus extends PublicTransport{
+
+        int BusNum;
+        int B_passenger;
+        int B_income;
+
+        Bus(){}     //기본 생성자
+        Bus(int BusNum){
+            this.BusNum = BusNum;
+        }
+
+        void take(int B_income){
+            this.B_income += B_income;
+            B_passenger++;
+        }
+
+        void showInfo(){
+            System.out.println("버스" + BusNum + "번의 승객은 " + B_passenger + "명이고, 수입은 " + B_income + "원 입니다.");
+        }
+
+
+
+}
+
+class Subway extends PublicTransport{
+    String SubNum;
+    int S_passenger;
+    int S_income;
+    public Subway(){}  //public붙여도 상관 없!
+
+    Subway(String SubNum){
+        this.SubNum = SubNum;
+    }
+
+    void take(int S_income){
+        this.S_income += S_income;
+        S_passenger++;
+    }
+
+    void showInfo(){
+        System.out.println("버스" + SubNum + "번의 승객은 " + S_passenger + "명이고, 수입은 " + S_income + "원 입니다.");
+    }
+
+}
+
+class Taxi extends PublicTransport{
+    int TaxiNum;
+    int T_passenger;
+    int T_income;
+    Taxi(){}
+
+    Taxi(int TaxiNum){
+        this.TaxiNum = TaxiNum;
+    }
+
+    void take(int T_income){
+        this.T_income += T_income;
+        T_passenger++;
+    }
+
+    void showInfo(){
+        System.out.println("버스" + TaxiNum + "번의 승객은 " + T_passenger + "명이고, 수입은 " + T_income + "원 입니다.");
+    }
+
+
+
+}
+
+
+class Student{
+    String name;
+    int money;
+
+    Student(){}
+    public Student(String name, int money){
+        this.name=name;
+        this.money=money;
+    }
+    void takeBus(Bus bus){
+        bus.take(1500);
+        this.money-=1500;
+    }
+    void takeTaxi(Taxi taxi){       // 택시 탑승
+        taxi.take(4500);
+        this.money -= 4500;
+    }
+
+    void takeSubway(Subway subway){     // 지하철 탑승
+        subway.take(1500);
+        this.money -= 1500;
+    }
+
+    void showInfo(){
+        System.out.println(name+"의 남은 돈은 "+money+"원 입니다.");
+    }
+
+}
+
+public class Q2 {
+    public static void main(String[] args) {
+        Student studentKim = new Student("Kim", 10000);
+        Student studentLee = new Student("Lee", 45000);
+        Student studentPark = new Student("Park", 5000);
+
+        Bus bus771 = new Bus(771);      // 노선 번호 771 버스 생성
+        studentKim.takeBus(bus771);     // kim이 771 버스 탐
+        studentKim.showInfo();      // kim 정보 출력
+        bus771.showInfo();      // 771버스 정보 출력
+
+        Taxi taxi0406 = new Taxi(0406);     // 택시 번호 0406 택시 생성
+        studentLee.takeTaxi(taxi0406);      // Lee가 0406 택시 탐
+        studentLee.showInfo();      // Lee 정보 출력
+        taxi0406.showInfo();        // 0406택시 정보 출력
+
+        Subway subway1 = new Subway("1호선");     // 1호선 지하철 생성
+        studentPark.takeSubway(subway1);        // Park이 1호선 지하철 탐
+        studentPark.showInfo();     // Park 정보 출력
+        subway1.showInfo();     // 1호선 정보 출력
+
+    }
+}
+
+
+
