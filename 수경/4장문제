@@ -1,0 +1,340 @@
+Q.04_1
+
+public class Q04_1 {
+
+    static class TV{  ******** 별부분 질문! TV클래스랑 메인클래스 접근제어자가 같아야 되나요?  둘 중 한곳에 static을 안 적으면 에러남..
+       private String name;
+       private int year;
+       private int size;
+
+        public TV(String name, int year, int size){ //생성자
+            this.name = name;
+            this.year = year;
+            this.size = size;
+        }
+        TV(){}
+        public void show(){
+            System.out.println(name+"에서 만든 "+year+"년형 "+size+"인치 TV");
+        }
+
+    }
+
+
+    public static void main(String[] args) {   *******
+        TV myTV = new TV("LG", 2017, 32);
+        myTV.show();
+    }
+}
+
+
+--------------------------------------------------------------------------------------------------------
+
+Q.04_2
+
+import java.util.Scanner;
+
+public class Q04_2 {
+
+    public static class Grade{
+        private int math;
+        private int science;
+        private int english;
+
+        public Grade(int math, int science, int english){
+            this.math = math;
+            this.science = science;
+            this.english = english;
+
+        }
+        Grade(){}
+
+        int average(){
+            return ((math+science+english)/3);
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("수학, 과학, 영어 순으로 3개의 점수 입력>> ");
+        int math = scanner.nextInt();
+        int science = scanner.nextInt();
+        int english = scanner.nextInt();
+        Grade me = new Grade(math, science, english);
+        System.out.println("평균은 "+ me.average());
+
+        scanner.close();
+    }
+}
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+Q.04_3
+
+public class Q04_3 {
+    public static class Song{
+        private String title;
+        private String artist;
+        private int year;
+        private String country;
+
+        Song(int year, String country, String artist, String title){
+            this.year = year;
+            this.country = country;
+            this.artist = artist;
+            this.title = title;
+        }
+        Song(){}
+
+        void show(){
+            System.out.println(year+"년 "+country+"국적의 "+artist+"가 부른 "+title);
+        }
+    }
+
+    public static void main(String[] args) {
+        Song song = new Song(1978,"스웨덴", "ABBA", "Dancing Queen");
+        song.show();
+
+    }
+}
+
+
+--------------------------------------------------------------------------------------------------------------------
+
+
+Q.04_4
+
+
+import java.awt.*;
+
+public class Q04_4 {
+
+    public static class Ractangle{
+        private int x;
+        private int y;
+        private int width;
+        private int height;
+
+        Ractangle(int x, int y, int width, int height){
+            this.x =x;
+            this.y = y;
+            this.width =width;
+            this.height = height;
+        }
+
+        public int square(){    //사각형의 넓이 리턴
+            return width*height;
+        }
+
+        public void show(){
+            System.out.println("("+x+","+y+"에서의 크기가 "+width+"x"+height+"인 사각형");
+        }
+
+     ********질문!!   public boolean contains( ){
+            int a = r.x+r.width;
+            int b = r.y+r.height;
+            
+            int c = t.x+t.width;
+            int d = t.y+t.height;
+            
+            if(a<c&&c<d){
+                return true;
+            }else {return false;}
+        }
+
+    }
+    public static void main(String[] args) {
+        Ractangle r = new Ractangle(2,2,8,7);
+        Ractangle s = new Ractangle(5,5,6,6);
+        Ractangle t = new Ractangle(1,1,10,10);
+
+        r.show();
+        System.out.println("s의 면적은 "+ s.square());
+        if(t.contains(r)) System.out.println("t는 r을 포함합니다.");
+        if(t.contains(s)) System.out.println("t는 s을 포함합니다.");
+    }
+}
+
+
+----------------------------------------------------------------------------------------------------------------------------
+
+Q,04_5
+
+import java.util.Scanner;
+
+public class Q04_5 {
+
+    static class Circle{
+        private double x,y;
+        private int radius;
+        public Circle(double x, double y, int radius){
+            this.x = x;         //x,y,radius 초기화
+            this.y = y;
+            this.radius = radius;
+        }
+        public void show(){
+            System.out.println();  ****여기부분 질문
+        }
+    }
+    public class CircleManager{
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            Circle c[] = new Circle[3]; //3개의 Circle 배열 선언
+            for(int i=0; i<3; i++){
+                System.out.print("x, y, radius >> ");
+                int X = scanner.nextInt();
+                int Y = scanner.nextInt();
+                int RADIUS = scanner.nextInt();
+                c[i] = new Circle(X, Y, RADIUS); //Circle객체 생성
+            }
+                for(int i=0; i<c.length; i++){
+                    c[i].show();
+                }
+                scanner.close();
+        }
+    }
+
+
+}
+
+
+------------------------------------------------------------------------------------------------------------
+
+Q.04_6
+
+각 radius의 크기를 비교하여 제일 큰 값을 출력
+
+
+----------------------------------------------------------------------------------------------------------------
+
+Q.04_7
+
+import java.util.Scanner;
+
+public class Q04_7 {
+    public static class Day {
+        private String work;
+
+        public void set(String work) {
+            this.work = work;
+        }
+
+        public String get() {
+            return work;
+        }
+
+        public void show() {
+            if (work == null) System.out.println("없습니다.");
+            else System.out.println(work + "입니다.");
+        }
+
+
+    }
+
+    public static void main(String[] args) {
+        MonthSchedule april = new MonthSchedule(30);
+        april.run();
+    }
+
+
+    public static class MonthSchedule {
+        private Day[] days;
+        private Scanner scanner;
+
+        public MonthSchedule(int daysOfMonth) {
+            days = new Day[daysOfMonth];
+            scanner = new Scanner(System.in);
+        }
+
+        public void run() {
+            System.out.println("이번달 스케쥴 관리 프로그램.");
+            int choice;
+            while (true) {
+                showMenu();
+                choice = scanner.nextInt();
+                switch (choice) {
+                    case 1:
+                        input();
+                        break;
+                    case 2:
+                        view();
+                        break;
+                    case 3:
+                        finish();
+                        return;
+                    default:
+                        System.out.println("잘못된 입력입니다. 다시 입력해주세요.");
+                        break;
+                }
+            }
+        }
+
+        private void showMenu() {
+            System.out.print("할일(입력: 1, 보기:2, 끝내기:3) >>");
+        }
+
+        private void input() {
+            System.out.print("날짜(1~" + days.length + ")?");
+            int day = scanner.nextInt();
+            if (day < 1 || day > days.length) {
+                System.out.println("날짜를 잘못 입력하셨습니다. 다시 입력해주세요.");
+                return;
+            }
+            System.out.print("할일(빈칸없이입력)?");
+            String work = scanner.next();
+            Day d = new Day();
+            d.set(work);
+            days[day - 1] = d;
+        }
+
+        private void view() {
+            System.out.print("날짜(1~" + days.length + ")?");
+            int day = scanner.nextInt();
+            if (day < 1 || day > days.length) {
+                System.out.println("날짜를 잘못 입력하셨습니다. 다시 입력해주세요.");
+                return;
+            }
+            Day d = days[day - 1];
+            if (d == null) {
+                System.out.println("해당 날짜에는 일정이 없습니다.");
+            } else {
+                System.out.print(day + "일의 할 일은 ");
+                d.show();
+            }
+        }
+
+        private void finish() {
+            System.out.println("프로그램을 종료합니다.");
+            scanner.close();
+        }
+
+    }
+}
+
+
+----------------------------------------------------------------------------------------------------------------------
+
+Q.04_8
+
+public class q8 {
+    public class Phone{
+        String name;
+        String tel;
+
+        Phone(String name, String tel){
+            this.name = name;
+            this.tel = tel;
+        }
+        public class PhoneBook {
+            private Phone[] phoneBook;
+            private int numPerson;
+        }
+    }
+
+
+}
+
+...ㅠㅠ
+
+

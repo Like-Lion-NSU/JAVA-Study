@@ -1,0 +1,52 @@
+Q.06_1
+
+class MyPoint{              **********다른점이 출력이 안되고 같은 점이라고 출력이 된다.
+    private int x;
+    private int y;
+
+    MyPoint(int x, int y){
+        this.x = x;
+        this.y = y;
+    }
+
+
+}
+
+public class Q06_1 {
+    public static void main(String[] args) {
+        MyPoint p = new MyPoint(3, 50);
+        MyPoint q = new MyPoint(4,50);
+        System.out.println(p);
+        if(p.equals(p))
+            System.out.println("같은 점");
+        else
+            System.out.println("다른 점");
+    }
+}
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+Q.06_5
+
+
+import java.util.Calendar;
+
+public class Q065 {
+    public static void main(String[] args) {
+        Calendar cal = Calendar.getInstance();
+        int hour = cal.get(Calendar.HOUR_OF_DAY);
+        int m = cal.get(Calendar.MINUTE);
+
+        System.out.println("현재 시간은 "+hour+"시"+m+"분입니다.");
+
+        if(4< hour&& hour <12){
+            System.out.println("Good Morning");
+        }else if(12<hour&& hour<18){
+            System.out.println("Good Afternoon");
+        }else{
+            System.out.println("Good Evening");
+        }
+
+    }
+}
