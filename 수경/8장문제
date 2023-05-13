@@ -1,0 +1,87 @@
+Q.08_1
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Q08_1 {
+    public static void main(String[] args) throws IOException { *********** FileWriter 클래스는 IOException을 발생시킨다.********
+        Scanner sc = new Scanner(System.in);
+        FileWriter writer = new FileWriter("c:/temp/phone.txt");
+
+        while (true) {
+            System.out.print("이름 전화번호 >> ");
+            String line = sc.nextLine();
+            if (line.equals("그만")) {
+                break;
+            }
+        }
+        
+        System.out.println("c:/temp/phone.txt에 저장하였습니다.");
+    }
+}
+
+
+--------------------------------------------------------------------------------------------------------------
+Q.08_2
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Q08_2 {
+    public static void main(String[] args) throws IOException {
+        Scanner sc = new Scanner(System.in);
+
+        //파일 저장하기
+        FileWriter writer = new FileWriter("c:/temp/phone.txt");
+        while (true) {
+            System.out.print("이름 전화번호 >> ");
+            String line = sc.nextLine();
+            if (line.equals("그만")) {
+                break;
+            }
+
+        }
+       
+        System.out.println("c:/temp/phone.txt에 저장하였습니다.");
+
+        //파일 읽기
+        BufferedReader read = new BufferedReader("c:/temp/phone.txt"); **********오류남..
+        String line;
+        while ((line ) {   ************while에 조건을 뭘로 해야될지...
+            System.out.println(line);
+        }
+
+    }
+}
+
+
+-----------------------------------------------------------------------------------------------------------------
+
+Q.08_3
+
+import java.io.BufferedReader;
+
+public class Q08_3 {
+    public static void main(String[] args) {
+        String file = "c:\\windows\\system.ini";
+        BufferedReader reader = new BufferedReader(file); **********여기서 오류남..
+        String text = null;
+
+        String upperCaseLine = text.toUpperCase();
+        System.out.println(upperCaseLine);
+
+    }
+}
+
+
+---------------------------------------------------------------------------------------------------------------------
+
+Q.08_4
+
+
+
+
